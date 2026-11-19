@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="UC — AI-powered shopping and services in one premium platform.">
+  <title>UC — One Platform. Everything.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">WELCOME TO THE NEW UC EXPERIENCE <span>✦</span> SHOP · DISCOVER · BOOK</div>
+  <header class="header">
+    <a class="brand" href="#" aria-label="UC home">U<span>C</span><small>UNIVERSE COMMERCE</small></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#services">Services</a><a href="#about">About UC</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist">♡ <span id="wishCount">0</span></button>
+      <button class="cart-btn" id="cartToggle">Bag <span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-bar hidden" id="searchBar">
+    <input id="searchInput" type="search" placeholder="Search products and services..." aria-label="Search products and services">
+    <button id="clearSearch">Clear</button>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE FUTURE OF EVERYDAY LIVING</p>
+        <h1>Everything you need.<br><em>One intelligent place.</em></h1>
+        <p class="hero-text">Discover considered products and trusted services, brought together in one seamless experience.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#shop">Explore shopping <span>↗</span></a><a class="text-link" href="#services">Discover services →</a></div>
+        <div class="hero-note"><span class="live-dot"></span> A new way to shop and get things done</div>
+      </div>
+      <div class="hero-art" aria-label="Abstract premium UC artwork">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-monogram">U<span>C</span></div>
+        <div class="art-caption">DESIGNED FOR WHAT'S NEXT <span>01 / 03</span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><span>SHOP WITH INTENTION</span><i>✦</i><span>BOOK WITH CONFIDENCE</span><i>✦</i><span>POWERED BY POSSIBILITY</span></section>
+
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE UC EDIT</p><h2>Shop the collection</h2><p class="muted">A curated starting point for your next favourite find.</p></div>
+        <a class="text-link" href="#shop">View all products ↗</a>
+      </div>
+      <div class="filters" id="productFilters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Technology">Technology</button>
+        <button class="filter" data-category="Lifestyle">Lifestyle</button>
+        <button class="filter" data-category="Accessories">Accessories</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="service-section" id="services">
+      <div class="section-heading">
+        <div><p class="eyebrow">MORE THAN A MARKETPLACE</p><h2>Services, simplified.</h2><p class="muted">Find help for the things that matter, all in one place.</p></div>
+        <span class="coming-label">UC SERVICES</span>
+      </div>
+      <div class="service-grid" id="serviceGrid"></div>
+    </section>
+
+    <section class="ai-banner" id="about">
+      <div><p class="eyebrow">A SMARTER WAY FORWARD</p><h2>Meet the next era<br>of <em>everyday discovery.</em></h2><p>UC is being built to bring intelligent discovery, shopping and services into one connected experience.</p><span class="coming-label">AI FEATURES — COMING SOON</span></div>
+      <div class="ai-symbol"><span>U</span><b>C</b><i>✦</i></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#">U<span>C</span><small>UNIVERSE COMMERCE</small></a>
+    <p>One platform. Everything.</p>
+    <div><a href="#shop">Shop</a><a href="#services">Services</a><a href="mailto:hello@uc.example">Contact</a></div>
+    <small>© <span id="year"></span> UC. Demo storefront — sample listings and prices.</small>
+  </footer>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="drawer hidden" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-head"><h3>Your bag</h3><button class="close-btn" data-close>×</button></div>
+    <div id="cartItems" class="drawer-content"></div>
+    <div class="drawer-foot"><div class="total-line"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><button class="primary-btn full" id="checkoutBtn">Continue <span>→</span></button><p class="tiny">Demo only. Checkout and payments are not connected yet.</p></div>
+  </aside>
+  <aside class="drawer hidden" id="wishDrawer" aria-label="Wishlist">
+    <div class="drawer-head"><h3>Your wishlist</h3><button class="close-btn" data-close>×</button></div>
+    <div id="wishItems" class="drawer-content"></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
